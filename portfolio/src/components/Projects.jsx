@@ -32,7 +32,7 @@ const Projects = () => {
         <h2 className="section-title">My Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div key={index} className="project-card fade-in-up">
               <div className="project-image">
                 <Code2 size={48} color="var(--text-secondary)" />
               </div>

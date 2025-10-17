@@ -12,7 +12,6 @@ const Skills = () => {
         'Java Servlets',
         'RESTful APIs',
         'Maven Build Tool',
-        'Multithreading'
       ]
     },
     {
@@ -46,7 +45,7 @@ const Skills = () => {
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
+            <div key={index} className="skill-card fade-in-up">
               <div className="skill-icon">{skill.icon}</div>
               <h3>{skill.title}</h3>
               <ul style={{ listStyle: 'none', marginTop: '1rem' }}>

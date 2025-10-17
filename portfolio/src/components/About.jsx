@@ -7,14 +7,14 @@ const About = () => {
       <div className="container">
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
-          <div className="about-image">
+          <div className="about-image fade-in-up">
             <img 
               src="/img.png" 
               alt="Vasanth Raj" 
             />
           </div>
           
-          <div className="about-text">
+          <div className="about-text fade-in-up">
             <p>
               Hello, I'm <strong>Vasanth Raj</strong>, a passionate Software Developer 
               specializing in <strong>Java backend development</strong> and modern web technologies.

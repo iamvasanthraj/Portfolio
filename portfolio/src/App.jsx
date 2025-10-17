@@ -6,9 +6,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useScrollAnimations } from './hooks/useScrollAnimations';
 import './index.css';
 
 function App() {
+  useScrollAnimations();
+
   return (
     <div className="App">
       <Header />
