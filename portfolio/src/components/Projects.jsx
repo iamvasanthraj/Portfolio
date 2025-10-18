@@ -1,29 +1,35 @@
-import React from 'react';
-import { ExternalLink, Github, Code2 } from 'lucide-react';
+import React from "react";
+import { ExternalLink, Github, Code2 } from "lucide-react";
+import Project1Image from "../assets/project1.png";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Dynamic Web Applications',
-      description: 'Created various dynamic web applications using modern web technologies and frameworks',
-      tech: ['JavaScript', 'HTML5', 'CSS3', 'React'],
-      demoLink: '#',
-      codeLink: 'https://github.com/iamvasanthraj'
+      title: "Taskify",
+      description:
+        "A simple task management app built with React and Vite. Add, complete, and track your tasks with a clean interface.",
+      tech: ["React", "Vite", "HTML5", "CSS3"],
+      demoLink: "https://iamvasanthraj.github.io/Taskify/", // live GitHub Pages demo
+      codeLink: "https://github.com/iamvasanthraj/Taskify", // GitHub repo
+      image: Project1Image,
     },
     {
-      title: 'Java Projects',
-      description: 'Developed multiple Java applications focusing on object-oriented programming principles',
-      tech: ['Java', 'OOP', 'Data Structures'],
-      demoLink: '#',
-      codeLink: 'https://github.com/iamvasanthraj'
+      title: "Java Projects",
+      description:
+        "Developed multiple Java applications focusing on object-oriented programming principles",
+      tech: ["Java", "OOP", "Data Structures"],
+      demoLink: "#",
+      codeLink: "https://github.com/iamvasanthraj",
     },
     {
-      title: 'Portfolio Website',
-      description: 'A responsive portfolio website showcasing my projects and skills',
-      tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
-      demoLink: '#',
-      codeLink: 'https://github.com/iamvasanthraj'
-    }
+      title: "Portfolio Website",
+      description:
+        "A responsive portfolio website showcasing my projects and skills",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      demoLink: "#",
+      codeLink: "https://github.com/iamvasanthraj",
+    },
+    
   ];
 
   return (
@@ -34,21 +40,34 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="project-card fade-in-up">
               <div className="project-image">
-                <Code2 size={48} color="var(--text-secondary)" />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-img"
+                  />
+                ) : (
+                  <Code2 size={48} color="var(--text-secondary)" />
+                )}
               </div>
+
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <div style={{ marginTop: '1rem' }}>
-                  <strong>Technologies:</strong> {project.tech.join(', ')}
+                <div style={{ marginTop: "1rem" }}>
+                  <strong>Technologies:</strong> {project.tech.join(", ")}
                 </div>
                 <div className="project-links">
-                  <a href={project.demoLink} className="project-link">
-                    <ExternalLink size={16} style={{ marginRight: '5px' }} />
+                  <a href={project.demoLink} className="project-link" target="_blank">
+                    <ExternalLink size={16} style={{ marginRight: "5px" }} />
                     Live Demo
                   </a>
-                  <a href={project.codeLink} className="project-link" style={{ background: '#333' }}>
-                    <Github size={16} style={{ marginRight: '5px' }} />
+                  <a
+                    href={project.codeLink}
+                    className="project-link" target="_blank"
+                    style={{ background: "#333" }}
+                  >
+                    <Github size={16} style={{ marginRight: "5px" }} />
                     Code
                   </a>
                 </div>

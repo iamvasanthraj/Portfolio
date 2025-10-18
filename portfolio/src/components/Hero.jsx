@@ -16,7 +16,7 @@ const Hero = () => {
           </h1>
           
           <p className="hero-subtitle">
-            <Code size={20} className="hero-icon" />
+            {/* <Code size={20} className="hero-icon" /> */}
             Software Developer & Tech Enthusiast
           </p>
           
