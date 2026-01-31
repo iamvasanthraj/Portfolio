@@ -73,7 +73,7 @@ export const education = [
   {
     title: 'Full Stack Development Course',
     place: 'KodNest, Bangalore',
-    year: '2024',
+    year: '2025',
     description: 'Completed an end-to-end full stack track with hands-on projects across frontend and backend.',
   },
 ];
